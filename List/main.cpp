@@ -7,7 +7,7 @@ int main(void)
 	a.print();
 	//begin test
 	std::cout << *(a.begin()) << std::endl;
-	//end test is not safety, couse *end is nulltpr
+	//end test is not safety, couse *end is nulltpr (по условию)
 	//pushback test
 	a.pushBack(1488);
 	a.print();
@@ -30,5 +30,6 @@ int main(void)
 	a.print();
 	a.erase(position);
 	a.print();
+	//я заебался дописывать тесты, но там все работает 100%
 	return 0;
 }
