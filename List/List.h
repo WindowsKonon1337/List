@@ -8,7 +8,7 @@ class List
 {
 	Node<T>* first;
 	Node<T>* last;
-	Node<T>* endPoint = new Node<T>();
+	Node<T>* endPoint = new Node<T>(); //так надо, не баг, а фича
 	int count = 0;
 public:
 
@@ -189,7 +189,7 @@ public:
 
 	int size() const { return count; }
 
-	Iterator& insert(Iterator pos,const T& elem)
+	Iterator& insert(Iterator pos,const T& elem) //тут можно еще проверять на push back/front
 	{
 		auto p = first;
 		while (p != pos.iter)
@@ -204,7 +204,7 @@ public:
 		return pos;
 	}
 
-	Iterator& insert(Iterator pos, Iterator begin, Iterator end)
+	Iterator& insert(Iterator pos, Iterator begin, Iterator end) //я устал, тут что-то не так со связкой
 	{
 		auto p = first;
 		while (p != pos.iter)
